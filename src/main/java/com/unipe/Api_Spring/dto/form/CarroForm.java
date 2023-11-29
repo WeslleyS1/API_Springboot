@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 
 @Data @NoArgsConstructor @AllArgsConstructor
 public class CarroForm {
-    private String nome;
     private String marca;
     private String modelo;
     private String cor;

@@ -18,9 +18,6 @@ public class Carro {
     private int id;
 
     @Column(nullable = false, length = 50) //tamanho 50
-    private String nome;
-
-    @Column(nullable = false, length = 50) //tamanho 50
     private String marca;
 
     @Column(nullable = false, length = 50) //tamanho 50
@@ -36,7 +33,6 @@ public class Carro {
     private float precoaluguel;
 
     public Carro(CarroForm carroForm){
-        this.nome = carroForm.getNome();
         this.marca = carroForm.getMarca();
         this.modelo = carroForm.getModelo();
         this.ano = carroForm.getAno();
