@@ -15,8 +15,11 @@ public class Usuario {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    @Column(nullable = false)
     private String nome;
+    @Column(nullable = false, unique = true)
     private String email;
+    @Column(nullable = false, unique = true)
     private String senha;
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String token;

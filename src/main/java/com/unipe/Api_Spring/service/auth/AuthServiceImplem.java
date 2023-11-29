@@ -6,13 +6,15 @@ import com.unipe.Api_Spring.dto.form.UsuarioForm;
 import com.unipe.Api_Spring.model.Usuario;
 import com.unipe.Api_Spring.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
 public class AuthServiceImplem implements AuthService{
 
-    private final UsuarioRepository usuarioRepository;
+    @Autowired
+    private UsuarioRepository usuarioRepository;
 
     @Override
     public UsuarioForm CreateUser(RegistroRequest RegistroRequest) {

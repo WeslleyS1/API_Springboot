@@ -5,6 +5,7 @@ import com.unipe.Api_Spring.dto.form.UsuarioForm;
 import com.unipe.Api_Spring.service.auth.AuthService;
 import com.unipe.Api_Spring.utils.RequestResposta;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class AuthController {
 
-    private final AuthService authService;
+    @Autowired
+    private AuthService authService;
 
     @PostMapping("/registro")
     public ResponseEntity<?> RegistroUser(@RequestBody RegistroRequest RegistroRequest) {
