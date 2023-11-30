@@ -24,19 +24,11 @@ public class Aluguel {
     @Column(nullable = false, length = 50) //tamanho 50
     private float valorTotal;
 
-    @Column(nullable = false, length = 50) //tamanho 50
-    private String dataInicio;
-
-    @Column(nullable = false, length = 50) //tamanho 50
-    private String dataFim;
-
     @OneToMany(mappedBy = "aluguel")
     private List<CarroAlugado> carrosAlugados;
 
     public Aluguel(Usuario locador, CarroAlugado carroAlugado ,String dataInicio, String dataFim){
         this.locador = locador;
-        this.dataInicio = dataInicio;
-        this.dataFim = dataFim;
         this.valorTotal = this.calculaValorTotal(carroAlugado.getCarro().getPrecoaluguel(), new StringToDate(dataInicio, dataFim));
     }
 
@@ -63,4 +55,13 @@ public class Aluguel {
     }
 
 
+    public void addCarroAlugado(CarroAlugado carroAlugado) {
+        carrosAlugados.add(carroAlugado);
+    }
+
+    public boolean removeCarroAlugado(CarroAlugado carroAlugado) {
+        if (!carrosAlugados.contains(carroAlugado)) return false;
+        carrosAlugados.remove(carroAlugado);
+        return true;
+    }
 }

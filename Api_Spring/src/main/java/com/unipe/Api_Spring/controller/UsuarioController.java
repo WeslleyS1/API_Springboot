@@ -1,5 +1,6 @@
 package com.unipe.Api_Spring.controller;
 
+import com.unipe.Api_Spring.dto.form.DadosAtualizados;
 import com.unipe.Api_Spring.dto.form.Login;
 import com.unipe.Api_Spring.model.Usuario;
 import com.unipe.Api_Spring.utils.RequestResposta;
@@ -29,9 +30,9 @@ public class UsuarioController {
         return RequestResposta.retornar(usuarioService.buscarPorId(id));
     }
 
-    @PutMapping("/{id}/nova-senha")
-    public ResponseEntity<Object> atualizarSenha(@PathVariable int id, @RequestBody String novaSenha) {
-        return RequestResposta.retornar(usuarioService.atualizaSenha(id, novaSenha));
+    @PutMapping("/{id}")
+    public ResponseEntity<Object> atualizar(@PathVariable int id, @RequestBody DadosAtualizados dadosAtualizados) {
+        return RequestResposta.retornar(usuarioService.atualizarDados(id, dadosAtualizados));
     }
 
     @DeleteMapping("/{id}")
