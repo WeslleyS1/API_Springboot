@@ -5,15 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d0b24972-6122-49d6-890a-156330363567" name="Changes" comment="&quot;feat: CRUD Carro&quot;">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/model/CarroAlugado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/repository/AluguelRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/repository/CarroAlugadoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/service/AluguelService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/utils/StringToDate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/utils/ValorTotal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/model/Aluguel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/model/Aluguel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/repository/CarroRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/repository/CarroRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Api_Spring/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/ApiSpringApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/controller/CarroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/controller/CarroController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/dto/form/CarroForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/dto/form/CarroForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/dto/form/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/dto/form/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/dto/form/RegistroRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/dto/form/RegistroRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/dto/form/UsuarioForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/dto/form/UsuarioForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/model/Aluguel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/model/Aluguel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/model/Carro.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/model/Carro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/model/CarroAlugado.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/model/CarroAlugado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/model/Enums/UserCargo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/model/Enums/UserCargo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/repository/AluguelRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/repository/AluguelRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/repository/CarroAlugadoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/repository/CarroAlugadoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/repository/CarroRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/repository/CarroRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/service/AluguelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/service/AluguelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/service/CarroService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/service/CarroService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/service/UsuarioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/service/auth/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/service/auth/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/service/auth/AuthServiceImplem.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/service/auth/AuthServiceImplem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/utils/RequestResposta.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/utils/RequestResposta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/utils/StringToDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/utils/StringToDate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/unipe/Api_Spring/utils/ValorTotal.java" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/main/java/com/unipe/Api_Spring/utils/ValorTotal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Api_Spring/src/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/unipe/Api_Spring/ApiSpringApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,12 +62,22 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/Unipe/javaAPP/TRUEAPI/API_Springboot/Api_Spring",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "editor.preferences.completion"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Unipe\javaAPP\TRUEAPI\API_Springboot\Api_Spring" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Unipe\javaAPP\TRUEAPI\API_Springboot\Api_Spring\src\main" />
+      <recent name="D:\Unipe\javaAPP\TRUEAPI\API_Springboot\Api_Spring\src" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

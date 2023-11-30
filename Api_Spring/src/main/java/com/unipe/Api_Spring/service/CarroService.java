@@ -6,6 +6,7 @@ import com.unipe.Api_Spring.repository.CarroRepository;
 import com.unipe.Api_Spring.utils.RequestResposta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -49,6 +50,10 @@ public class CarroService {
                 : new RequestResposta(carroOptional.get(), HttpStatus.OK);
     }
 
+    public List<Carro> buscarAlgueisMaioresQue50() {
+        return carroRepository.buscarMaiorOuIgualA50(50.0f);
+    }
+
     public RequestResposta salvar(CarroForm carroForm){
         Optional<Carro> carroOptional = carroRepository.findCarroByModelo(carroForm.getModelo());
         return carroOptional.isEmpty()
@@ -63,6 +68,22 @@ public class CarroService {
         }
         carroRepository.deleteById(id);
         return new RequestResposta("Carro deletado com sucesso", HttpStatus.OK);
+    }
+
+    public RequestResposta deletarPorModelo(String modelo) {
+        Optional<Carro> carroOptional = carroRepository.findCarroByModelo(modelo);
+        if(carroOptional.isEmpty()) {
+            return trataCarroInexistente();
+        }
+        carroRepository.deleteByModelo(modelo);
+
+        return new RequestResposta("Carro deletado com sucesso", HttpStatus.OK);
+    }
+
+    public RequestResposta deletarTodos() {
+        carroRepository.deleteAll();
+
+        return new RequestResposta("Carros deletados com sucesso", HttpStatus.OK);
     }
 
     private RequestResposta trataCarroInexistente() {

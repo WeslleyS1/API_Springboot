@@ -44,6 +44,11 @@ public class CarroController {
         return RequestResposta.retornar(carroService.buscarPorAno(ano));
     }
 
+    @GetMapping("/filterGreaterThan50")
+    public ResponseEntity<List<Carro>> buscarAlgueisMaioresQue50() {
+        return new ResponseEntity<>(carroService.buscarAlgueisMaioresQue50(), HttpStatus.OK);
+    }
+
     @PostMapping
     public ResponseEntity<Object> salvar(@RequestBody CarroForm carroForm){
         return RequestResposta.retornar(carroService.salvar(carroForm));
@@ -53,4 +58,15 @@ public class CarroController {
     public ResponseEntity<Object> deletar(@PathVariable int id){
         return RequestResposta.retornar(carroService.deletar(id));
     }
+
+    @DeleteMapping("/{modelo}")
+    public ResponseEntity<Object> deletarPorModelo(@PathVariable String modelo) {
+        return RequestResposta.retornar(carroService.deletarPorModelo(modelo));
+    }
+
+    @DeleteMapping("/todos")
+    public ResponseEntity<Object> deletarTodos() {
+        return RequestResposta.retornar(carroService.deletarTodos());
+    }
+
 }
