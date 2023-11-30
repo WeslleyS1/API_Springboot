@@ -1,5 +1,6 @@
 package com.unipe.Api_Spring.service;
 
+import com.unipe.Api_Spring.dto.form.DadosAtualizados;
 import com.unipe.Api_Spring.dto.form.Login;
 import com.unipe.Api_Spring.model.Usuario;
 import com.unipe.Api_Spring.repository.UsuarioRepository;
@@ -35,25 +36,22 @@ public class UsuarioService {
                 : new RequestResposta("Login realizado com sucesso", HttpStatus.ACCEPTED);
     }
 
-    public RequestResposta atualizaSenha(long id, String novaSenha) {
+    public RequestResposta atualizarDados(long id, DadosAtualizados dadosAtualizados) {
         Optional<Usuario> usuarioAtual = usuarioRepository.findById(id);
         if (usuarioAtual.isEmpty()) {
             return trataUsuarioInexistente();
         }
         Usuario usuario = usuarioAtual.get();
-        usuario.setSenha(novaSenha);
+
+        if (dadosAtualizados.getSenha() != null)
+            usuario.setSenha(dadosAtualizados.getSenha());
+        if (dadosAtualizados.getEmail() != null)
+            usuario.setEmail(dadosAtualizados.getEmail());
+
         return new RequestResposta(usuarioRepository.save(usuario), HttpStatus.CREATED);
     }
 
-    public RequestResposta atualizarEmail(long id, String novoEmail) {
-        Optional<Usuario> usuarioAtual = usuarioRepository.findById(id);
-        if (usuarioAtual.isEmpty()) {
-            return trataUsuarioInexistente();
-        }
-        Usuario usuario = usuarioAtual.get();
-        usuario.setEmail(novoEmail);
-        return new RequestResposta(usuarioRepository.save(usuario), HttpStatus.CREATED);
-    }
+
 
     public RequestResposta deletar(long id){
         Optional<Usuario> usuarioOptional = usuarioRepository.findById(id);
