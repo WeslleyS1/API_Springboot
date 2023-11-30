@@ -11,4 +11,6 @@ public interface AluguelRepository extends JpaRepository<Aluguel, Integer> {
 
     @Query("SELECT a FROM Aluguel a WHERE a.locador.id = :idUsuario")
     Optional<Aluguel> findAluguelByLocador(@Param("idUsuario")int idUsuario);
+
+    Optional<Aluguel> findAluguelByCarro(int id);
 }

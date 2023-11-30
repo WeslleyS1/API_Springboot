@@ -1,6 +1,7 @@
 package com.unipe.Api_Spring.utils;
 
 import com.unipe.Api_Spring.model.Aluguel;
+import com.unipe.Api_Spring.model.CarroAlugado;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,10 +17,10 @@ public class StringToDate {
 
     // transformando o datainicio e datafim que está em String do Aluguel em Data
     @Autowired
-    private Aluguel aluguel;
+    private CarroAlugado carroAlugado;
 
-    String dataInicio = aluguel.getDataInicio();
-    String dataFim = aluguel.getDataFim();
+    String dataInicio = carroAlugado.getDataInicio();
+    String dataFim = carroAlugado.getDataFim();
 
     DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy"); //
 

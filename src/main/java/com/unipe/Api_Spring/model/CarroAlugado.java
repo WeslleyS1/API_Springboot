@@ -21,10 +21,22 @@ public class CarroAlugado {
     @JoinColumn(name = "aluguel_id", referencedColumnName = "id")
     private Aluguel aluguel;
 
+    @Column(nullable = false, length = 50) //tamanho 50
+    private String dataInicio;
+
+    @Column(nullable = false, length = 50) //tamanho 50
+    private String dataFim;
+
 
     public CarroAlugado(Carro carro, Aluguel aluguel) {
         this.carro = carro;
         this.aluguel = aluguel;
     }
 
+    public CarroAlugado(Carro carro, Aluguel aluguel, String dataInicio, String dataFim) {
+        this.carro = carro;
+        this.aluguel = aluguel;
+        this.dataInicio = dataInicio;
+        this.dataFim = dataFim;
+    }
 }
